@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú PDF</title>
+    <style>
+        /* Aseguramos que el body y html ocupen todo el espacio de la ventana */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* El contenedor del PDF ocupa todo el espacio disponible */
+        #pdf-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Establecemos que el embed ocupe todo el contenedor */
+        embed {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-    <embed src="MenuDigital.pdf" type="application/pdf" width="100%" height="100%">
+    <div id="pdf-container">
+        <embed src="MenuDigital.pdf" type="application/pdf">
+    </div>
 </body>
 </html>
